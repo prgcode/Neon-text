@@ -1,0 +1,38 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Tahoma, serif;
+}
+.neon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0 40px;
+    font-size: 8em;
+    color: #fff;
+    text-shadow: 0 0 20px #0065fc;
+}
+.neon::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    z-index: -1;
+    color: #0065fc;
+    filter: blur(15px);
+}
+.neon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0065fcc3;
+    z-index: -2;
+    opacity: .5;
+    filter: blur(40px);
+}
